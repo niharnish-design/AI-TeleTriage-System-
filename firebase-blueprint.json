@@ -1,0 +1,59 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Stores user information and preferences.",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Firebase Auth UID" },
+        "displayName": { "type": "string", "description": "User's full name" },
+        "email": { "type": "string", "format": "email", "description": "User's email" },
+        "role": { "type": "string", "enum": ["user", "admin"], "description": "User role" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Account creation time" }
+      },
+      "required": ["uid", "email"]
+    },
+    "TriageSession": {
+      "title": "Triage Session",
+      "description": "A single triage interaction.",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string", "description": "UID of the user" },
+        "status": { "type": "string", "enum": ["active", "completed"], "description": "Session status" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Session start time" },
+        "lastUpdated": { "type": "string", "format": "date-time", "description": "Last update time" },
+        "summary": { "type": "string", "description": "AI generated summary of the session" },
+        "severity": { "type": "string", "enum": ["low", "medium", "high", "emergency"], "description": "Assessed severity" }
+      },
+      "required": ["userId", "status", "createdAt"]
+    },
+    "Message": {
+      "title": "Message",
+      "description": "A message within a triage session.",
+      "type": "object",
+      "properties": {
+        "sessionId": { "type": "string", "description": "ID of the parent session" },
+        "sender": { "type": "string", "enum": ["user", "ai"], "description": "Sender of the message" },
+        "text": { "type": "string", "description": "Message content" },
+        "type": { "type": "string", "enum": ["text", "image", "voice"], "description": "Type of message" },
+        "imageUrl": { "type": "string", "description": "URL of the uploaded image (if any)" },
+        "createdAt": { "type": "string", "format": "date-time", "description": "Message timestamp" }
+      },
+      "required": ["sessionId", "sender", "text", "type", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{uid}": {
+      "schema": "UserProfile",
+      "description": "User profiles"
+    },
+    "/sessions/{sessionId}": {
+      "schema": "TriageSession",
+      "description": "Triage sessions"
+    },
+    "/sessions/{sessionId}/messages/{messageId}": {
+      "schema": "Message",
+      "description": "Messages in a session"
+    }
+  }
+}

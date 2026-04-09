@@ -1,0 +1,5 @@
+{
+  "name": "Tele-Triage AI: Skin & Body Analysis",
+  "description": "An AI-powered Tele-Triage system for skin and body issues, featuring image analysis, voice recognition, and severity assessment.",
+  "requestFramePermissions": ["camera", "microphone"]
+}
