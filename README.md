@@ -1,3 +1,32 @@
+# AI Tele-Triage System for Skin & Body Analysis
+An AI-powered healthcare system using CNN, voice recognition, and chatbot assistance.
+## Features
+
+- 🧠 AI-powered image analysis using CNN for detecting skin and outer body conditions  
+- 📸 Image upload system for real-time diagnosis  
+- 🎤 Voice-based symptom input using speech recognition  
+- 🤖 Intelligent chatbot for providing medical suggestions  
+- ⚡ Fast and user-friendly web interface  
+- 📊 Combined analysis of image + symptoms for better accuracy  
+- 🏥 Basic medical recommendations and next-step guidance
+- ## Tech Stack
+
+- **Frontend:** HTML, CSS (or React if used)  
+- **Backend:** Python (Flask)  
+- **Machine Learning:** TensorFlow / Keras (CNN Model)  
+- **Image Processing:** OpenCV  
+- **Voice Recognition:** SpeechRecognition  
+- **Libraries:** NumPy, Pandas  
+- **Development Tools:** VS Code, Git, GitHub
+- ## Tech Stack
+
+- **Frontend:** HTML, CSS for building the user interface  
+- **Backend:** Flask (Python) for handling server-side logic and API integration  
+- **Machine Learning:** TensorFlow/Keras for implementing the CNN-based image classification model  
+- **Image Processing:** OpenCV for preprocessing input images  
+- **Speech Processing:** SpeechRecognition library for converting voice input into text  
+- **Data Handling:** NumPy and Pandas for efficient data manipulation  
+- **Version Control:** Git and GitHub for project management and collaboration  
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
