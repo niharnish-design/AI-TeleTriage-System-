@@ -18,15 +18,23 @@ An AI-powered healthcare system using CNN, voice recognition, and chatbot assist
 - **Voice Recognition:** SpeechRecognition  
 - **Libraries:** NumPy, Pandas  
 - **Development Tools:** VS Code, Git, GitHub
-- ## Tech Stack
+- ## How to Run
 
-- **Frontend:** HTML, CSS for building the user interface  
-- **Backend:** Flask (Python) for handling server-side logic and API integration  
-- **Machine Learning:** TensorFlow/Keras for implementing the CNN-based image classification model  
-- **Image Processing:** OpenCV for preprocessing input images  
-- **Speech Processing:** SpeechRecognition library for converting voice input into text  
-- **Data Handling:** NumPy and Pandas for efficient data manipulation  
-- **Version Control:** Git and GitHub for project management and collaboration  
+1. Clone the repository:
+   [git clone https://github.com/your-username/AI-TeleTriage-System.git](https://github.com/niharnish-design/AI-TeleTriage-System-)
+
+2. Navigate to the project folder:
+   cd AI-TeleTriage-System
+
+3. Install required dependencies:
+   pip install -r requirements.txt
+
+4. Run the Flask server:
+   python app.py
+
+5. Open your browser and go to:
+   http://127.0.0.1:5000
+-  
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
